@@ -2,6 +2,7 @@ package com.t3r.studyui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -16,23 +17,24 @@ fun DashboardScreen(name: String, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier.padding(16.dp)
     ) {
-//        Text(
-//            text = "Welcome to the Dashboard, $name!",
+//        Column(
 //            modifier = Modifier.fillMaxSize(),
-//            textAlign = TextAlign.Center
-//        )
-        Column(
+//            horizontalAlignment = Alignment.CenterHorizontally,
+//            verticalArrangement = Arrangement.Center
+//        ) {
+//            Text(
+//                text = "Welcome to the Dashboard, $name!",
+//                textAlign = TextAlign.Center)
+//        }
+
+        Row(
             modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.Top
         ) {
             Text(
                 text = "Welcome to the Dashboard, $name!",
-                textAlign = TextAlign.Center)
-
-            Text(
-                text = "This is where you can find all your important information and updates.",
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                textAlign = TextAlign.Center
             )
         }
     }
